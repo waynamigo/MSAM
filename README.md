@@ -1,7 +1,7 @@
 
 Multi-Stage Synergistic Aggregation Network for Remote Sensing Visual Grounding
 ========
-This is the official repository of 'Multi-Stage Synergistic Aggregation Network for Remote Sensing Visual Grounding'
+This is the official repository of 'Multi-Stage Synergistic Aggregation Network for Remote Sensing Visual Grounding'. The organized clean code will be pushed no later than January 8th 2024.
 
 ## Introduction
 This project contains a method that leverages cross-attention and query channel broadcasting as two fusion kernels involving both queries in the Multi-Stage Synergistic Aggregation Module (MSAM) with Swin transformer and GPT-like generative manner.
