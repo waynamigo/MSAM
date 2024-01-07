@@ -1,0 +1,6 @@
+apex
+mmdet
+pydantic
+pycocotools
+numpy
+openmim
