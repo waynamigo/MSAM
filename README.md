@@ -1,7 +1,7 @@
 
 Multi-Stage Synergistic Aggregation Network for Remote Sensing Visual Grounding
 ========
-This is the official repository of 'Multi-Stage Synergistic Aggregation Network for Remote Sensing Visual Grounding'. The organized clean code will be pushed no later than January 8th 2024.
+This is the official repository of 'Multi-Stage Synergistic Aggregation Network for Remote Sensing Visual Grounding'. 
 
 ## Introduction
 This project contains a method that leverages cross-attention and query channel broadcasting as two fusion kernels involving both queries in the Multi-Stage Synergistic Aggregation Module (MSAM) with Swin transformer and GPT-like generative manner.
@@ -34,10 +34,9 @@ conda install pytorch==1.9.1 torchvision==0.10.1 -c pytorch
 pip install requirements.txt
 ```
 
-
 ## Preparation
 1. The preparing the [DIOR-RSVG](https://github.com/ZhanYang-nwpu/RSVG-pytorch/tree/main/DIOR_RSVG) dataset. 
-2. Run `bash scripts/xml2json_DIORRSVG.sh` to generate available format for our dataset preparation. The prepared data dir tree is this:
+2. Run `bash scripts/xml2instances.py` to generate available format for our dataset preparation. The prepared data dir tree is this:
 ```
 └── annotations(origion xml dataset from DIOR-RSVG)
 │   └── rsvgd

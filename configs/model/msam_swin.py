@@ -2,7 +2,7 @@ d_model = 256
 num_bin = 1000
 model = dict(
     type='MSAM',
-    vis_enc_qcb=dict(
+    vis_enc=dict(
         type='DarkNet53',
         pretrained='./data/weights/yolov3.weights',# change backbone
         freeze_layer=2,
@@ -11,7 +11,7 @@ model = dict(
     swin_blocks=dict(
         type='ResNet50'
     )
-    # lan_enc=dict(
+    # lan_enc=dict(// light weight// only for ablation study
     #     type='LSTM',
     #     lstm_cfg=dict(
     #         type='gru',
@@ -25,13 +25,12 @@ model = dict(
     #     output_cfg=dict(type="max")
     # ),
     fusion=dict(
-        type="KC",
+        type="KernelSqueeze",
         vis_chs=[256, 512, 1024],
         direction='bottom_up',
-
     ),
     head=dict(
-        type='SeqHead',
+        type='InputHead',
         in_ch=1024,
         num_bin=num_bin,
         multi_task=False,
