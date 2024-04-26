@@ -106,8 +106,8 @@ class LoadImageAnnotationsFromFile(object):
     def _load_bbox(self, results):
         if self.with_bbox:
             gt_bbox = results['ann']['bbox']
-            gt_bbox[2] = gt_bbox[0] + gt_bbox[2]
-            gt_bbox[3] = gt_bbox[1] + gt_bbox[3]
+#            gt_bbox[2] = gt_bbox[0] + gt_bbox[2]
+#            gt_bbox[3] = gt_bbox[1] + gt_bbox[3]
             gt_bbox = numpy.array(
                 gt_bbox, dtype=numpy.float64)  # x1, y1, x2, y2
             h, w = results['ori_shape'][:2]
