@@ -24,16 +24,27 @@ The best models and ablation study models are available in [Google Drive](https:
 ```
 docker pull waynamigo/msam:py38t1.9
 ```
-### Conda installation
+### Conda/pip installation
 1. install pytorch and torchvision
 ```
 conda install pytorch==1.9.1 torchvision==0.10.1 -c pytorch
+pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 2. install other requirements
 ```
 pip install requirements.txt
 ```
+3. openmin install mmmcv(v1.7.1)
+```
+mim install mmcv-full==1.7.1
+```
+4. if there's unexpected error like FormatCode or sth:
+```
+try downgrade or upgrade deps.
 
+eg. TypeError: FormatCode() got an unexpected keyword argument 'verify'
+downgrade yapf==0.40.2 to 0.40.1
+```
 ## Preparation
 1. The preparing the [DIOR-RSVG](https://github.com/ZhanYang-nwpu/RSVG-pytorch/tree/main/DIOR_RSVG) dataset. 
 2. Run `bash scripts/xml2instances.py` to generate available format for our dataset preparation. The prepared data dir tree is this:
